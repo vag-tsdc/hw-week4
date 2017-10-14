@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collector</title>
+
+
+ <!-- jQuery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+            <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row" id="first-row" style="text-align:center;">
+
+            <!-- breathing room -->
+            <div class="col-md-2">
+                <!-- space space space -->
+            </div>
+
+            <!-- HEADER -->
+
+
+            <div class="col-md-8">
+                <header>
+                    <h1 id="crystalCollector">
+                        Crystal Collector!
+                    </h1>
+                </header>
+            </div>
+
+            <!-- breathing room -->
+            <div class="col-md-2">
+                <!-- space space space -->
+            </div>
+
+        </div>
+
+
+        <!-- RULES -->
+
+        <div class="row" id="second-row" style="text-align:center;">
+
+
+
+            <div class="col-md-6">
+                <h2 id="rules">
+                    Rules:
+                </h2>
+                <p class="rules">
+                    You will be given a random number at the start of the game.
+                    <br> There are four crystals below. By clicking on a crystal you will add a specific ammount of points to
+                    your total score.
+                    <br> You win the game by matching your total score to random number, you lose the game if your total score
+                    goes above the random number.
+                    <br> The value of each crystal is hidden from you until you click on it.
+                    <br> Each time when the game starts, the game will change the values of each crystal.
+                </p>
+            </div>
+
+            <!-- Wins & Losses Counter -->
+
+            <div class="col-md-6">
+                <div class="winslosses">
+                    <h2 span="win-or-Loose">
+                        YOU WIN / YOU LOOSE.
+                    </h2>
+                </div>
+                <h3 id="wins"> Wins:
+                    <span id="playerWins"></span>
+                </h3>
+
+
+                <h3 id="losses">
+
+                    Losses:
+                    <span id="playerLosses"></span>
+                </h3>
+            </div>
+        </div>
+
+
+
+        <!-- Crystal Running Counter / Wins & Losses -->
+
+
+
+        <div class="row" id="third-row" style="text-align:center;">
+            <div class="col-md-6" id="randomNumber">
+                <div>
+                    <h3> Match This Number :
+                        <span id="match-this"></span>
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <!-- USER SCORE IS: runningScore  -->
+
+            <div class="col-md-6" id="playerScore">
+                <h3>Your current total is :
+                    <span id="playerNumber"></span>
+                </h3>
+            </div>
+        </div>
+
+
+        <!-- crystals & gems for pushing  -->
+
+        <div class="row" id="button-row" style="text-align:center;">
+
+            <!-- breathing room  -->
+            <div class="col-md-2"></div>
+
+            <!-- pink button  -->
+            <div class="col-md-2" id="pink-gem-Button">
+                <button type="button" class="btn btn-default">
+                    <img class="gem" src="assets/images/pink-gem.png">
+                </button>
+            </div>
+            <!-- yellow button  -->
+
+            <div class="col-md-2" id="yell-gem-Button">
+                <button type="button" class="btn btn-default">
+                    <img class="gem" src="assets/images/yellow-gem.png">
+                </button>
+            </div>
+
+            <!-- blue buttons  -->
+            <div class="col-md-2" id="blue-gem-Button">
+                <button type="button" class="btn btn-default">
+                    <img class="gem" src="assets/images/blue-gem.png">
+                </button>
+            </div>
+
+            <!-- purple buttons  -->
+            <div class="col-md-2" id="purp-gem-Button">
+                <button type="button" class="btn btn-default">
+                    <img class="gem" src="assets/images/purple-gem.png">
+                </button>
+            </div>
+        </div>
+
+        <!-- breathing room  -->
+        <div class="col-md-2">
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+    </div>
+        <!-- javascript - game script  -->
+        <script src="assets/game.js" rel="javascript"></script>
+
+</body>
+
+</html>
