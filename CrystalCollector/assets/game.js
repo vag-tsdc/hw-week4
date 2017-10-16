@@ -1,6 +1,9 @@
 /* global variables */
 //console.log for page edits //
 
+// error: counts losses and wins on reset. 
+// gives you a loss either way.
+
 $(document).ready(function () {
     console.log("READY!");
 
@@ -36,7 +39,7 @@ $(document).ready(function () {
     var pinkCryst = createRandomNumber(1, 19);
     var blueCryst = createRandomNumber(1, 19);
     var purpCryst = createRandomNumber(1, 19);
-    console.log("Pink: " + pinkCryst + "Yellow: " + yellCryst + "Blue: " + blueCryst + "Purple: " + purpCryst);
+    console.log("CRYSTAL VALUES Pink: " + pinkCryst + " Yellow: " + yellCryst + " Blue: " + blueCryst + " Purple: " + purpCryst);
 
 
 
@@ -46,13 +49,13 @@ $(document).ready(function () {
         playerNumber = playerNumber + pinkCryst;
         $("#playerNumber").html(playerNumber);
         if (playerNumber === randomNumber) {
-            playerWins = playerWins + 1
+            playerWins = playerWins + 1;
             $("#playerWins").html(playerWins);
-            console.log("WINS!")
+            console.log("WINS! " + playerWins);
         } else if (playerNumber > randomNumber) { 
             playerLosses = playerLosses + 1
             $("#playerLosses").html(playerLosses);
-            console.log("LOOSE!");
+            console.log("LOOSE! " + playerLosses);
             newGame();
         }
     })
@@ -63,11 +66,11 @@ $(document).ready(function () {
         if (playerNumber === randomNumber) {
             playerWins = playerWins + 1
             $("#playerWins").html(playerWins);
-            console.log("WINS!")
+            console.log("WINS! " + playerWins);
         } else if (playerNumber > randomNumber) { 
-            playerLosses = playerLosses + 1
+            playerLosses = playerLosses + 1;
             $("#playerLosses").html(playerLosses);
-            console.log("LOOSE!");
+            console.log("LOOSE! " + playerLosses);
             newGame();
         }
     })
@@ -76,13 +79,13 @@ $(document).ready(function () {
         playerNumber = playerNumber + blueCryst;
         $("#playerNumber").html(playerNumber);
         if (playerNumber === randomNumber) {
-            playerWins = playerWins + 1
+            playerWins = playerWins + 1;
             $("#playerWins").html(playerWins);
-            console.log("WINS!")
+            console.log("WINS! " + playerWins);
         } else if (playerNumber > randomNumber) { 
-            playerLosses = playerLosses + 1
+            playerLosses = playerLosses + 1;
             $("#playerLosses").html(playerLosses);
-            console.log("LOOSE!");
+            console.log("LOOSE! " + playerLosses);
             newGame();
         }
     })
@@ -91,16 +94,20 @@ $(document).ready(function () {
         playerNumber = playerNumber + purpCryst;
         $("#playerNumber").html(playerNumber);
         if (playerNumber === randomNumber) {
-            playerWins = playerWins + 1
+            playerWins = playerWins + 1;
             $("#playerWins").html(playerWins);
-            console.log("WINS!")
+            console.log("WINS! " + playerWins);
         } else if (playerNumber > randomNumber) { 
-            playerLosses = playerLosses + 1
+            playerLosses = playerLosses + 1;
             $("#playerLosses").html(playerLosses);
-            console.log("LOOSE!");
+            console.log("LOOSE! " + playerLosses);
             newGame();
         }
     })
+
+// Losses and Wins Error: on reset.
+// If you win, you ALSO get a loss...
+// if you loose, you ONLY get a loss...
 
     function newGame() {
         playerNumber = 0;
@@ -109,7 +116,8 @@ $(document).ready(function () {
         pinkCryst = createRandomNumber(1, 19);
         blueCryst = createRandomNumber(1, 19);
         purpCryst = createRandomNumber(1, 19);
-        console.log("Pink: " + pinkCryst + "Yellow: " + yellCryst + "Blue: " + blueCryst + "Purple: " + purpCryst);
+        console.log("NEW CRYSTAL VALUE: Pink: " + pinkCryst + " Yellow: " + yellCryst + " Blue: " + blueCryst + " Purple: " + purpCryst);
+        console.log("Player Score : W = " + playerWins + " L = " + playerLosses)
         $("#playerNumber").html(playerNumber);
         $("#match-this").html(randomNumber);
         
