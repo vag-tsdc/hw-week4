@@ -1,8 +1,4 @@
 /* global variables */
-//console.log for page edits //
-
-// error: counts losses and wins on reset. 
-// gives you a loss either way.
 
 $(document).ready(function () {
     console.log("READY!");
@@ -52,6 +48,7 @@ $(document).ready(function () {
             playerWins = playerWins + 1;
             $("#playerWins").html(playerWins);
             console.log("WINS! " + playerWins);
+            newGame();
         } else if (playerNumber > randomNumber) { 
             playerLosses = playerLosses + 1
             $("#playerLosses").html(playerLosses);
@@ -67,6 +64,7 @@ $(document).ready(function () {
             playerWins = playerWins + 1
             $("#playerWins").html(playerWins);
             console.log("WINS! " + playerWins);
+            newGame();
         } else if (playerNumber > randomNumber) { 
             playerLosses = playerLosses + 1;
             $("#playerLosses").html(playerLosses);
@@ -82,6 +80,7 @@ $(document).ready(function () {
             playerWins = playerWins + 1;
             $("#playerWins").html(playerWins);
             console.log("WINS! " + playerWins);
+            newGame();
         } else if (playerNumber > randomNumber) { 
             playerLosses = playerLosses + 1;
             $("#playerLosses").html(playerLosses);
@@ -97,6 +96,7 @@ $(document).ready(function () {
             playerWins = playerWins + 1;
             $("#playerWins").html(playerWins);
             console.log("WINS! " + playerWins);
+            newGame();
         } else if (playerNumber > randomNumber) { 
             playerLosses = playerLosses + 1;
             $("#playerLosses").html(playerLosses);
@@ -108,6 +108,7 @@ $(document).ready(function () {
 // Losses and Wins Error: on reset.
 // If you win, you ALSO get a loss...
 // if you loose, you ONLY get a loss...
+// *fixed... no newGame(); on win...
 
     function newGame() {
         playerNumber = 0;
