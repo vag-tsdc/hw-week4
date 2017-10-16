@@ -1,6 +1,9 @@
 /* global variables */
 //console.log for page edits //
 
+// error: counts losses and wins on reset. 
+// gives you a win either way.
+
 $(document).ready(function () {
     console.log("READY!");
 
